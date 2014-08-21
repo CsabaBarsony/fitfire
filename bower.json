@@ -1,0 +1,20 @@
+{
+  "name": "fitfire",
+  "version": "0.0.0",
+  "homepage": "https://github.com/CsabaBarsony/fitfire",
+  "authors": [
+    "CsabaBarsony <csaba.barsony@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.22"
+  }
+}

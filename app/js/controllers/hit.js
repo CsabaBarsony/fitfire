@@ -1,6 +1,14 @@
 "use strict";
 
-app.controller("HitController", function($scope){
-	var hits = new Firebase("https://shining-torch-1499.firebaseio.com/");
-	$scope.data = "Hit";
+app.controller("HitController", function($scope, FIRE_URL, $firebase){
+	var ref = new Firebase(FIRE_URL + "/hits");
+	var hits = $firebase(ref).$asArray();
+	$scope.hits = hits;
+
+	$scope.hitClick = function(id){
+		var hit = prompt("Enter hit!");
+		console.log(hit);
+	};
 });
+
+
