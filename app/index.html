@@ -6,7 +6,9 @@
 	<link rel="stylesheet" href="css/style.css"/>
 </head>
 <body ng-controller="HitController">
-	<div ng-repeat="hit in hits" ng-click="hitClick(hit.id)" class="hit">{{ hit.name }}</div>
+	<div ng-show="loadingHits">Loading...</div>
+	<div ng-repeat="hit in hits" ng-click="hitClick(hit.$id)" class="hit" ng-hide="loadingHits">{{ hit.name }}</div>
+
 	<script src="lib/angular/angular.js"></script>
 	<script src="lib/angularfire/dist/angularfire.js"></script>
 	<script src="lib/firebase/firebase.js"></script>
